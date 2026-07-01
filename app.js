@@ -1,8 +1,6 @@
-// Utilitare DOM intuitive
 const find = (selector, parent = document) => parent.querySelector(selector);
 const findAll = (selector, parent = document) => Array.from(parent.querySelectorAll(selector));
 
-// Generator elemente HTML nativ
 const createElement = (tag, attributes = {}, ...children) => {
   const element = document.createElement(tag);
   
@@ -30,7 +28,6 @@ const createElement = (tag, attributes = {}, ...children) => {
   return element;
 };
 
-// Manager LocalStorage wrapper
 const storage = {
   get(key, defaultValue) {
     try {
@@ -57,7 +54,6 @@ const SVG_ICONS = {
 let highestZIndex = 10;
 const activeWindows = new Map();
 
-// Declarare aplicatii din sistem
 const RUNTIME_APPS = {
   about: {
     title: 'About Me',
@@ -387,7 +383,6 @@ const RUNTIME_APPS = {
   }
 };
 
-// Logica de Window Management
 function openApp(appId) {
   const appConfig = RUNTIME_APPS[appId];
   if (!appConfig) return;
@@ -534,7 +529,6 @@ function refreshDock() {
   });
 }
 
-// Sistem de Toast Notification
 let toastTimeoutToken;
 function showToast(message) {
   let existingToast = find('#toast');
@@ -556,7 +550,6 @@ function showToast(message) {
   toastTimeoutToken = setTimeout(() => existingToast.remove(), 1800);
 }
 
-// Constructoare UI Desktop
 function renderDesktopIcons() {
   const iconConfig = [['about', 'About Me'], ['notes', 'Notes'], ['calc', 'Calculator'], ['media', 'Media Player']];
   const desktopWrapper = find('#desktopIcons');
@@ -625,7 +618,6 @@ function updateTheme(themeName) {
   storage.set('theme', themeName);
 }
 
-// Initializare instanta OS
 function run() {
   updateTheme(storage.get('theme', 'dark'));
   renderDesktopIcons();
