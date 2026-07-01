@@ -48,7 +48,6 @@ input, textarea {
   font-family: inherit;
 }
 
-/* Decoratiuni fundal Desktop */
 .desktop {
   position: fixed;
   inset: 0;
@@ -63,7 +62,6 @@ body.light .desktop {
               linear-gradient(135deg, #fff5f0, #ffe8d6);
 }
 
-/* Bara de sus */
 .topbar {
   position: absolute;
   top: 0; left: 0; right: 0;
@@ -193,7 +191,6 @@ body.light .dicon .label {
   text-shadow: none;
 }
 
-/* Ferestre aplicatii */
 .windows {
   position: absolute;
   inset: 0;
@@ -296,7 +293,6 @@ body.light .dicon .label {
   border-radius: 4px;
 }
 
-/* Dock-ul principal */
 .dock {
   position: absolute;
   bottom: 12px;
@@ -372,7 +368,6 @@ body.light .dock {
   transform: translateX(-50%) translateY(0);
 }
 
-/* Modulul About */
 .app-about {
   padding: 24px;
   display: flex;
@@ -417,7 +412,6 @@ body.light .dock {
   color: #fff;
 }
 
-/* Modulul Notes */
 .app-notes {
   display: flex;
   flex-direction: column;
@@ -468,7 +462,6 @@ body.light .dock {
   line-height: 1.6;
 }
 
-/* Modulul Calculator */
 .app-calc {
   display: flex;
   flex-direction: column;
@@ -505,7 +498,6 @@ body.light .dock {
 .app-calc .pad button.eq { background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary)); color: #fff; }
 .app-calc .pad button.fn { color: var(--text-muted); }
 
-/* Modulul Media Player */
 .app-media {
   display: flex;
   flex-direction: column;
